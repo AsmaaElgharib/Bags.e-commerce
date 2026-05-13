@@ -48,6 +48,9 @@ app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowCredentials()
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
@@ -55,6 +58,7 @@ if (app.Environment.IsDevelopment())
 app.MapControllers();
 app.MapGroup("api").MapIdentityApi<AppUser>(); //api/login
 app.MapHub<NotificationHub>("/hubs/notifications");
+app.MapFallbackToController("Index", "Fallback");
 
 try
 {
