@@ -2,5 +2,5 @@ export const environment = {
     production: true,
     apiUrl: 'api/',
     hubUrl: 'hubs/notifications',
-    stripePublicKey: 'pk_test_51RtskkGN7h7XSQM9iDo3QEYweN6Up3oFjC45hGow6vunegoj7CODFexkXunwdn22sXKJY0sS3Y0G5zGBPld7naPV003gTGnUSU'
+    stripePublicKey: 'pk_test_51TWl1zLjKSO8Gj684ngI1a5iDkFGIgD8jBNpeSh6S6Hp89iJZ5S2mtIwYL1OU60FJ9MhYQAm4RcSaPjAgb2gWQnu00wzcVWI8u'
 };
