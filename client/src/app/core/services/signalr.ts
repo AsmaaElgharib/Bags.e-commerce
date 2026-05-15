@@ -11,15 +11,15 @@ export class Signalr {
   hubUrl = `${window.location.protocol}//${window.location.host}${environment.hubUrl}`;
   hubConnection?: HubConnection;
   orderSignal = signal<Order | null>(null);
-
   createHubConnection() {
+    console.log(this.hubUrl);
     this.hubConnection = new HubConnectionBuilder()
-        .withUrl(this.hubUrl, {
+        .withUrl(environment.hubUrl, {
         withCredentials: true
       })
       .withAutomaticReconnect()
       .build();
-
+      console.log(this.hubConnection);
     this.hubConnection.start()
       .catch(error => console.log(error));
 
